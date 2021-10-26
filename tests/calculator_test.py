@@ -1,28 +1,11 @@
 """Testing the Calculator"""
-from calculator.main import Calculator
+from calc.calculator import Calculator
 
-def test_calculator_result():
-    """testing calculator result is 0"""
-    calc = Calculator()
-    assert calc.result == 0
-
-def test_calculator_add():
-    """Testing the Add function of the calculator"""
-    #Arrange by instantiating the calc class
-    calc = Calculator()
-    #Act by calling the method to be tested
-    calc.add_number(1)
-    #Assert that the results are correct
-    assert calc.result == 1
-
-def test_calculator_get_result():
-    """Testing the Get result method of the calculator"""
-    calc = Calculator()
-    calc.add_number(1)
-    assert calc.get_result() == 1
+def test_calculator_add_static():
+    """testing that our calcultor has a static method for addition"""
+    assert Calculator.add_numbers(1,2) == 3
 
 def test_calculator_subtract():
-    """Testing the subtract method of the calculator"""
-    calc = Calculator()
-    calc.subtract_number(1)
-    assert calc.get_result() == -1
+    """Testing the subtract method of the calc"""
+
+    assert Calculator.subtract_numbers(1,2) == -1
