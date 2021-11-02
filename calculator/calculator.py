@@ -5,6 +5,7 @@ from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
 class Calculator:
     """ This is the Calculator class"""
+    #this is the calculator static property
     history = []
     @staticmethod
     def get_result_of_first_calculation_added_to_history():
